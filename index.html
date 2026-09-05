@@ -461,48 +461,71 @@
             </span>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-start">
             <!-- 展示卡片 1 -->
-            <div class="group relative overflow-hidden rounded-lg border border-slate-700 bg-slate-800 aspect-video">
-                <!-- 模擬超音波影像的 Placeholder (可換成真實照片) -->
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600" alt="Ultrasound monitor" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter grayscale contrast-125">
-                <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                    <p class="text-tech-cyan text-xs font-tech mb-1">M1. RECORD</p>
-                    <p class="text-white text-sm font-bold truncate">Gallbladder Scan</p>
-                </div>
-                <div class="absolute top-2 right-2 flex gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+            <div>
+                <button type="button" onclick="toggleDatabaseActions('record-actions-1', this)" aria-expanded="false" aria-controls="record-actions-1" class="group relative overflow-hidden rounded-lg border border-slate-700 bg-slate-800 aspect-video w-full text-left hover:border-tech-cyan focus:outline-none focus:ring-2 focus:ring-tech-cyan transition-colors">
+                    <!-- 模擬超音波影像的 Placeholder (可換成真實照片) -->
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=600" alt="Ultrasound monitor" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter grayscale contrast-125">
+                    <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/95 via-tech-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-3 flex items-end justify-between gap-2">
+                        <p class="text-white text-sm font-bold">M1 Record Abd.echo</p>
+                        <i class="ph ph-caret-down text-tech-cyan text-lg transition-transform duration-300"></i>
+                    </div>
+                    <div class="absolute top-2 right-2 flex gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                    </div>
+                </button>
+                <div id="record-actions-1" class="record-actions hidden mt-2 p-2 space-y-2 rounded-lg border border-tech-cyan/30 bg-slate-900/90">
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">大堂課</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">Hand-on實作課程</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課前問卷</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課後問卷</button>
                 </div>
             </div>
 
             <!-- 展示卡片 2 -->
-            <div class="group relative overflow-hidden rounded-lg border border-slate-700 bg-slate-800 aspect-video">
-                <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600" alt="Cardiology" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter grayscale contrast-125">
-                <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                    <p class="text-tech-cyan text-xs font-tech mb-1">M2. RECORD</p>
-                    <p class="text-white text-sm font-bold truncate">Apical 4-Chamber</p>
+            <div>
+                <button type="button" onclick="toggleDatabaseActions('record-actions-2', this)" aria-expanded="false" aria-controls="record-actions-2" class="group relative overflow-hidden rounded-lg border border-slate-700 bg-slate-800 aspect-video w-full text-left hover:border-tech-cyan focus:outline-none focus:ring-2 focus:ring-tech-cyan transition-colors">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600" alt="Cardiology" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter grayscale contrast-125">
+                    <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/95 via-tech-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-3 flex items-end justify-between gap-2">
+                        <p class="text-white text-sm font-bold">M2 Record CV Echo</p>
+                        <i class="ph ph-caret-down text-tech-cyan text-lg transition-transform duration-300"></i>
+                    </div>
+                </button>
+                <div id="record-actions-2" class="record-actions hidden mt-2 p-2 space-y-2 rounded-lg border border-tech-cyan/30 bg-slate-900/90">
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">大堂課</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">Hand-on實作課程</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課前問卷</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課後問卷</button>
                 </div>
             </div>
 
             <!-- 展示卡片 3 -->
-            <div class="group relative overflow-hidden rounded-lg border border-slate-700 bg-slate-800 aspect-video">
-                <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=600" alt="Hands-on training" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter grayscale contrast-125">
-                <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                    <p class="text-tech-cyan text-xs font-tech mb-1">W2. TRAINING</p>
-                    <p class="text-white text-sm font-bold truncate">Pigtail Phantom</p>
+            <div>
+                <button type="button" onclick="toggleDatabaseActions('record-actions-3', this)" aria-expanded="false" aria-controls="record-actions-3" class="group relative overflow-hidden rounded-lg border border-slate-700 bg-slate-800 aspect-video w-full text-left hover:border-tech-cyan focus:outline-none focus:ring-2 focus:ring-tech-cyan transition-colors">
+                    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=600" alt="Hands-on training" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter grayscale contrast-125">
+                    <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/95 via-tech-dark/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-3 flex items-end justify-between gap-2">
+                        <p class="text-white text-sm font-bold">M3 Record Chest Echo</p>
+                        <i class="ph ph-caret-down text-tech-cyan text-lg transition-transform duration-300"></i>
+                    </div>
+                </button>
+                <div id="record-actions-3" class="record-actions hidden mt-2 p-2 space-y-2 rounded-lg border border-tech-cyan/30 bg-slate-900/90">
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">大堂課</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">Hand-on實作課程</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課前問卷</button>
+                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課後問卷</button>
                 </div>
             </div>
 
             <!-- 展示卡片 4 -->
             <div class="group relative overflow-hidden rounded-lg border border-slate-700 bg-slate-800 aspect-video">
                 <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=600" alt="ER training" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 filter grayscale contrast-125">
-                <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/90 via-transparent to-transparent"></div>
-                <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                    <p class="text-tech-cyan text-xs font-tech mb-1">M4. RECORD</p>
-                    <p class="text-white text-sm font-bold truncate">FAST Protocol</p>
+                <div class="absolute inset-0 bg-gradient-to-t from-tech-dark/95 via-tech-dark/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 w-full p-3">
+                    <p class="text-white text-sm font-bold">M4 Shock &amp; Fast</p>
                 </div>
             </div>
         </div>
@@ -556,6 +579,25 @@
             const activeIcon = activeBtn.querySelector('i');
             activeIcon.classList.remove('text-slate-300');
             activeIcon.classList.add('text-tech-cyan');
+        }
+
+        function toggleDatabaseActions(targetId, trigger) {
+            const target = document.getElementById(targetId);
+            const willOpen = target.classList.contains('hidden');
+
+            document.querySelectorAll('.record-actions').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            document.querySelectorAll('[aria-controls^="record-actions-"]').forEach(button => {
+                button.setAttribute('aria-expanded', 'false');
+                button.querySelector('.ph-caret-down')?.classList.remove('rotate-180');
+            });
+
+            if (willOpen) {
+                target.classList.remove('hidden');
+                trigger.setAttribute('aria-expanded', 'true');
+                trigger.querySelector('.ph-caret-down')?.classList.add('rotate-180');
+            }
         }
     </script>
 </body>
