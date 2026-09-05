@@ -479,7 +479,7 @@
                 <div id="record-actions-1" class="record-actions hidden mt-2 p-2 space-y-2 rounded-lg border border-tech-cyan/30 bg-slate-900/90">
                     <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">大堂課</button>
                     <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">Hand-on實作課程</button>
-                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課前問卷</button>
+                    <a href="https://github.com/sheila21928-ikea/echo-for-internal-medicine/blob/main/GI-before-the%20session" target="_blank" rel="noopener noreferrer" class="block w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課前問卷</a>
                     <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課後問卷</button>
                 </div>
             </div>
@@ -495,7 +495,10 @@
                     </div>
                 </button>
                 <div id="record-actions-2" class="record-actions hidden mt-2 p-2 space-y-2 rounded-lg border border-tech-cyan/30 bg-slate-900/90">
-                    <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">大堂課</button>
+                    <button type="button" onclick="toggleRecordDetail('record-detail-2-lecture', this)" aria-expanded="false" aria-controls="record-detail-2-lecture" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors flex items-center justify-between gap-2">
+                        <span>大堂課</span>
+                        <i class="ph ph-caret-down text-tech-cyan transition-transform duration-300"></i>
+                    </button>
                     <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">Hand-on實作課程</button>
                     <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課前問卷</button>
                     <button type="button" class="w-full px-3 py-2 text-sm text-left text-slate-200 rounded bg-slate-800 hover:bg-tech-cyan/20 hover:text-tech-cyan transition-colors">課後問卷</button>
@@ -529,6 +532,35 @@
                 </div>
             </div>
         </div>
+
+        <div id="record-detail-2-lecture" class="record-detail hidden mt-6 glass-panel cyber-border p-5 md:p-7 rounded-lg">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-5">
+                <div>
+                    <p class="text-tech-cyan font-tech text-xs tracking-wider mb-1">M2 RECORD / CV ECHO</p>
+                    <h3 class="text-xl md:text-2xl font-bold text-white">2/6 中午12:00-14:00</h3>
+                </div>
+                <a href="https://drive.google.com/file/d/1-6QqPBQxzifQS8BP1vaVExlFbbVxqQKn/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-tech-cyan bg-tech-cyan/10 text-tech-cyan hover:bg-tech-cyan hover:text-tech-dark hover:shadow-neon-cyan transition-all font-medium">
+                    <i class="ph ph-play-circle text-xl"></i>
+                    2/6 CV大堂課錄影連結
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <figure class="aspect-video overflow-hidden rounded-lg border border-slate-700 bg-slate-950">
+                    <img src="assets/cv-lecture/cv-lecture-01.jpg" alt="2月6日 CV 大堂課講師授課照片" loading="lazy" decoding="async" class="w-full h-full object-contain">
+                </figure>
+                <figure class="aspect-video overflow-hidden rounded-lg border border-slate-700 bg-slate-950">
+                    <img src="assets/cv-lecture/cv-lecture-02.jpg" alt="2月6日 CV 大堂課會場照片一" loading="lazy" decoding="async" class="w-full h-full object-contain">
+                </figure>
+                <figure class="aspect-video overflow-hidden rounded-lg border border-slate-700 bg-slate-950">
+                    <img src="assets/cv-lecture/cv-lecture-03.jpg" alt="2月6日 CV 大堂課會場照片二" loading="lazy" decoding="async" class="w-full h-full object-contain">
+                </figure>
+                <figure class="aspect-video overflow-hidden rounded-lg border border-slate-700 bg-slate-950">
+                    <img src="assets/cv-lecture/cv-lecture-04.jpg" alt="2月6日 CV 大堂課講師與投影片照片" loading="lazy" decoding="async" class="w-full h-full object-contain">
+                </figure>
+            </div>
+        </div>
+
         <div class="mt-6 text-center">
             <button class="px-6 py-2 border border-slate-600 text-slate-300 rounded hover:text-tech-cyan hover:border-tech-cyan transition-colors text-sm font-tech">
                 [ LOAD MORE DATA ]
@@ -592,11 +624,38 @@
                 button.setAttribute('aria-expanded', 'false');
                 button.querySelector('.ph-caret-down')?.classList.remove('rotate-180');
             });
+            document.querySelectorAll('.record-detail').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            document.querySelectorAll('[aria-controls^="record-detail-"]').forEach(button => {
+                button.setAttribute('aria-expanded', 'false');
+                button.querySelector('.ph-caret-down')?.classList.remove('rotate-180');
+            });
 
             if (willOpen) {
                 target.classList.remove('hidden');
                 trigger.setAttribute('aria-expanded', 'true');
                 trigger.querySelector('.ph-caret-down')?.classList.add('rotate-180');
+            }
+        }
+
+        function toggleRecordDetail(targetId, trigger) {
+            const target = document.getElementById(targetId);
+            const willOpen = target.classList.contains('hidden');
+
+            document.querySelectorAll('.record-detail').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            document.querySelectorAll('[aria-controls^="record-detail-"]').forEach(button => {
+                button.setAttribute('aria-expanded', 'false');
+                button.querySelector('.ph-caret-down')?.classList.remove('rotate-180');
+            });
+
+            if (willOpen) {
+                target.classList.remove('hidden');
+                trigger.setAttribute('aria-expanded', 'true');
+                trigger.querySelector('.ph-caret-down')?.classList.add('rotate-180');
+                target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
             }
         }
     </script>
