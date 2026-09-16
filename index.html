@@ -138,13 +138,15 @@
                 <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <i class="ph-fill ph-activity text-tech-cyan text-3xl animate-pulse"></i>
                     <span class="font-tech font-bold text-xl tracking-wider text-white">USG<span class="text-tech-cyan">.SYS</span></span>
+                    <span class="text-xs text-slate-300 whitespace-nowrap">By 一般內科 黃琪雅</span>
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#overview" class="hover:text-tech-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">系統總覽</a>
-                        <a href="#curriculum" class="hover:text-tech-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">核心模組</a>
-                        <a href="#logistics" class="hover:text-tech-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">報名與規章</a>
-                        <a href="#showcase" class="hover:text-tech-cyan transition-colors px-3 py-2 rounded-md text-sm font-medium">成果資料庫</a>
+                    <div class="ml-4 lg:ml-10 flex items-baseline space-x-1 lg:space-x-4">
+                        <a href="#faculty" class="hover:text-tech-cyan transition-colors px-2 lg:px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">師資陣容</a>
+                        <a href="#overview" class="hover:text-tech-cyan transition-colors px-2 lg:px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">系統總覽</a>
+                        <a href="#curriculum" class="hover:text-tech-cyan transition-colors px-2 lg:px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">核心模組</a>
+                        <a href="#logistics" class="hover:text-tech-cyan transition-colors px-2 lg:px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">報名與規章</a>
+                        <a href="#showcase" class="hover:text-tech-cyan transition-colors px-2 lg:px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap">成果資料庫</a>
                     </div>
                 </div>
             </div>
@@ -181,8 +183,51 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-tech-cyan/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
     </section>
 
+    <!-- 師資陣容 (Faculty Team) -->
+    <section id="faculty" class="scroll-mt-20 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+            <i class="ph ph-chalkboard-teacher text-3xl text-tech-cyan"></i>
+            <h2 class="text-2xl font-bold font-tech text-white tracking-widest border-b-2 border-tech-cyan pb-1">FACULTY TEAM</h2>
+            <span class="text-sm text-slate-400">／ 師資陣容</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <article class="glass-panel cyber-border p-6 rounded-lg">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="ph ph-lightbulb text-2xl text-tech-cyan"></i>
+                    <h3 class="text-lg font-bold text-white">課程需求與設計</h3>
+                </div>
+                <p class="text-sm leading-7 text-slate-300">
+                    住院醫師需求想法搜集與課程設計、細節討論：一般內科 黃琪雅醫師、郭妍伶主任，感染科 李承翰醫師，心臟血管內科 楊其臻醫師，急診部 陳伯榕醫師
+                </p>
+            </article>
+
+            <article class="glass-panel cyber-border p-6 rounded-lg">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="ph ph-users-three text-2xl text-tech-cyan"></i>
+                    <h3 class="text-lg font-bold text-white">課程師資</h3>
+                </div>
+                <ul class="space-y-3 text-sm leading-6 text-slate-300">
+                    <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-tech-cyan mt-1"></i><span>肝膽腸胃內科 研究員 郭加智、楊峻嘉、黃博裕</span></li>
+                    <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-tech-cyan mt-1"></i><span>心臟血管內科 研究員 楊其臻、徐瑋、蘇俐瑋</span></li>
+                    <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-tech-cyan mt-1"></i><span>胸腔內科 研究員 胡凱淇、楊皓文、李博洧</span></li>
+                </ul>
+            </article>
+
+            <article class="glass-panel cyber-border p-6 rounded-lg">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="ph ph-clipboard-text text-2xl text-tech-cyan"></i>
+                    <h3 class="text-lg font-bold text-white">執行與網站建置</h3>
+                </div>
+                <p class="text-sm leading-7 text-slate-300">
+                    課程學員安排與人力調配、問卷設計與回收、網站設計與建立：一般內科 黃琪雅醫師
+                </p>
+            </article>
+        </div>
+    </section>
+
     <!-- 報名與機制儀表板 (Logistics) -->
-    <section id="logistics" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="logistics" class="scroll-mt-20 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="flex items-center gap-3 mb-8">
             <i class="ph ph-cpu text-3xl text-tech-cyan"></i>
             <h2 class="text-2xl font-bold font-tech text-white tracking-widest border-b-2 border-tech-cyan pb-1">OPERATION PARAMETERS</h2>
@@ -453,7 +498,7 @@
     </section>
 
     <!-- 成果展示 (Showcase Database) -->
-    <section id="showcase" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-20">
+    <section id="showcase" class="scroll-mt-20 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="flex items-center justify-between mb-8">
             <div class="flex items-center gap-3">
                 <i class="ph ph-monitor text-3xl text-tech-cyan"></i>
@@ -714,6 +759,29 @@
             <button class="px-6 py-2 border border-slate-600 text-slate-300 rounded hover:text-tech-cyan hover:border-tech-cyan transition-colors text-sm font-tech">
                 [ LOAD MORE DATA ]
             </button>
+        </div>
+    </section>
+
+    <!-- 相關學術論文產出與學會投稿 -->
+    <section id="publications" class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-20">
+        <div class="flex items-center gap-3 mb-8">
+            <i class="ph ph-article text-3xl text-tech-cyan"></i>
+            <h2 class="text-2xl font-bold text-white tracking-wide border-b-2 border-tech-cyan pb-1">相關學術論文產出與學會投稿</h2>
+        </div>
+
+        <div class="glass-panel cyber-border p-6 md:p-8 rounded-lg">
+            <p class="text-sm font-tech text-tech-cyan tracking-wider mb-3">2026 ACADEMIC SUBMISSION</p>
+            <a href="assets/publications/2026-tame-pocus-abstract.docx" download class="group flex flex-col sm:flex-row sm:items-center gap-4 rounded-lg border border-slate-700 bg-slate-900/80 p-5 hover:border-tech-cyan hover:bg-tech-cyan/10 transition-all">
+                <span class="w-12 h-12 shrink-0 rounded-lg border border-tech-cyan/40 bg-tech-cyan/10 flex items-center justify-center text-tech-cyan group-hover:shadow-neon-cyan">
+                    <i class="ph ph-file-doc text-3xl"></i>
+                </span>
+                <span class="flex-1 text-white font-bold leading-7 group-hover:text-tech-cyan transition-colors">
+                    2026台灣醫學教育學會論文摘要 - 以多元學習理論建構課前後自評：內科住院醫師分階段床邊超音波（POCUS）課程之初步成效
+                </span>
+                <span class="inline-flex items-center gap-2 text-sm text-tech-cyan whitespace-nowrap">
+                    <i class="ph ph-download-simple text-lg"></i> 下載附檔
+                </span>
+            </a>
         </div>
     </section>
 
